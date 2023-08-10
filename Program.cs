@@ -29,4 +29,22 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
+System.Console.Write("Введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
 
+int[] array = new int[num];
+int sumNum = 0;
+
+for (int i = 0; i < array.Length; i++)
+{
+    array[i] = new Random().Next(-10,100);
+    Console.Write(array[i] + " ");
+
+    if (i % 2 != 0)
+    {
+        sumNum += array[i];
+    }
+}
+
+System.Console.WriteLine();
+System.Console.WriteLine(sumNum);
